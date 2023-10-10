@@ -79,6 +79,7 @@
   font-weight: bold;
   margin-top: 20px;
   cursor: not-allowed;
+  font-size: medium;
 }
 
 @media screen and (max-width: 480px) {
@@ -99,19 +100,19 @@
   }
 
   .id::before {
-    content: "Order ID: ";
+    content: 'Order ID: ';
     font-weight: 500;
   }
   .name::before {
-    content: "Customer: ";
+    content: 'Customer: ';
     font-weight: 500;
   }
   .address::before {
-    content: "Address: ";
+    content: 'Address: ';
     font-weight: 500;
   }
   .total::before {
-    content: "Total: ";
+    content: 'Total: ';
     font-weight: 500;
   }
 
@@ -128,7 +129,7 @@
     margin-bottom: 20px;
   }
 
-  .wrapper{
+  .wrapper {
     width: 100%;
   }
 }
