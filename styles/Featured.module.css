@@ -34,3 +34,9 @@
     height: 50vh;
   }
 }
+
+@media screen and (max-width: 760px) {
+  .container {
+    height: 50vh;
+  }
+}
