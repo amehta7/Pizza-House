@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import styles from '../styles/Navbar.module.css'
 import { FaBars } from 'react-icons/fa'
-import { useState } from 'react'
+import React, { useState } from 'react'
+import Link from 'next/link'
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -24,7 +25,9 @@ const Navbar = () => {
       </div>
       <div className={styles.item}>
         <ul className={styles.list}>
-          <li className={styles.listItem}>Home</li>
+          <Link className={styles.listItem} href='/' passHref>
+            Home
+          </Link>
           <li className={styles.listItem}>Products</li>
           <li className={styles.listItem}>Menu</li>
           <Image
@@ -50,15 +53,20 @@ const Navbar = () => {
         <FaBars color='white' onClick={() => setOpen(!open)} />
       </div>
       {open && (
-        <ul className={styles.MobileMenu} open={open}>
-          <li
-            className={styles.listItem}
-            onClick={() => {
-              setOpen(!open)
-            }}
-          >
-            Home
-          </li>
+        <div className={styles.MobileMenu} open={open}>
+          <Link href='/'>
+            <React.Fragment>
+              <a
+                href='/'
+                className={styles.listItem}
+                onClick={() => {
+                  setOpen(!open)
+                }}
+              >
+                Home
+              </a>
+            </React.Fragment>
+          </Link>
           <li
             className={styles.listItem}
             onClick={() => {
@@ -99,7 +107,7 @@ const Navbar = () => {
           >
             Contact
           </li>
-        </ul>
+        </div>
       )}
     </div>
   )
