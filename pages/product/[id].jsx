@@ -2,12 +2,16 @@ import styles from '../../styles/Product.module.css'
 import Image from 'next/image'
 import { useState } from 'react'
 import axios from 'axios'
+import { useDispatch } from 'react-redux'
+import { addProduct } from '../../redux/cartSlice'
 
 const Product = ({ pizza }) => {
   const [size, setSize] = useState(0)
   const [price, setPrice] = useState(pizza.prices[0])
   const [extras, setExtras] = useState([])
   const [quantity, setQuantity] = useState(1)
+
+  const dispatch = useDispatch()
 
   const handlePrice = (number) => {
     setPrice((prev) => prev + number)
@@ -35,6 +39,10 @@ const Product = ({ pizza }) => {
   }
 
   //console.log(extras)
+
+  const handleAdd = () => {
+    dispatch(addProduct({ ...pizza, price, quantity, extras }))
+  }
 
   return (
     <div className={styles.container}>
@@ -90,7 +98,9 @@ const Product = ({ pizza }) => {
             min={1}
             onChange={(e) => setQuantity(e.target.value)}
           />
-          <button className={styles.button}>Add to Cart</button>
+          <button className={styles.button} onClick={handleAdd}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
