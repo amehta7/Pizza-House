@@ -4,6 +4,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { addProduct } from '../../redux/cartSlice'
+import { useRouter } from 'next/router'
 
 const Product = ({ pizza }) => {
   const [size, setSize] = useState(0)
@@ -12,6 +13,7 @@ const Product = ({ pizza }) => {
   const [quantity, setQuantity] = useState(1)
 
   const dispatch = useDispatch()
+  const router = useRouter()
 
   const handlePrice = (number) => {
     setPrice((prev) => prev + number)
@@ -42,6 +44,7 @@ const Product = ({ pizza }) => {
 
   const handleAdd = () => {
     dispatch(addProduct({ ...pizza, price, quantity, extras }))
+    router.push('/cart')
   }
 
   return (

@@ -28,10 +28,12 @@ const Navbar = () => {
       </div>
       <div className={styles.item}>
         <ul className={styles.list}>
-          <Link className={styles.listItem} href='/' passHref>
-            Home
+          <Link href='/' passHref>
+            <li className={styles.listItem}>Home</li>
           </Link>
-          <li className={styles.listItem}>Products</li>
+          <Link href='/products' passHref>
+            <li className={styles.listItem}>Products</li>
+          </Link>
           <li className={styles.listItem}>Menu</li>
           <Image
             src='/img/logo2.png'
@@ -72,14 +74,19 @@ const Navbar = () => {
               </a>
             </React.Fragment>
           </Link>
-          <li
-            className={styles.listItem}
-            onClick={() => {
-              setOpen(!open)
-            }}
-          >
-            Products
-          </li>
+          <Link href='/products'>
+            <React.Fragment>
+              <a
+                href='/products'
+                className={styles.listItem}
+                onClick={() => {
+                  setOpen(!open)
+                }}
+              >
+                Products
+              </a>
+            </React.Fragment>
+          </Link>
           <li
             className={styles.listItem}
             onClick={() => {

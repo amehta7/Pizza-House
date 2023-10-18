@@ -35,7 +35,7 @@
 
 .wrapper {
   width: 90%;
-  max-height: 300px;
+  max-height: 320px;
   background-color: #333;
   padding: 50px;
   padding-top: 10px;
@@ -113,6 +113,7 @@
 
   .wrapper {
     width: 100%;
+    max-height: 400px;
   }
 }
 
@@ -172,5 +173,21 @@
 
   .wrapper {
     width: 100%;
+    max-height: 400px;
   }
+}
+
+.paymentMethods {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.payButton {
+  padding: 10px 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  background-color: white;
+  color: teal;
+  font-weight: bold;
 }
