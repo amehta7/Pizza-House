@@ -4,11 +4,13 @@ const handler = (req, res) => {
   if (req.method === 'POST') {
     const { username, password } = req.body
 
+    console.log(process.env.ADMIN_USERNAME, process.env.ADMIN_PASSWORD)
+
     if (
       username === process.env.ADMIN_USERNAME &&
       password === process.env.ADMIN_PASSWORD
     ) {
-      res.setHeaders(
+      res.setHeader(
         'Set-Cookie',
         cookie.serialize('token', process.env.TOKEN, {
           maxAge: 60 * 60,

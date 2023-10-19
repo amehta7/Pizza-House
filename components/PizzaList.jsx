@@ -6,9 +6,14 @@ const PizzaList = ({ data }) => {
     <div className={styles.container}>
       <h1 className={styles.title}>THE BEST PIZZA IN TOWN</h1>
       <p className={styles.desc}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu
-        in pretium molestie. Interdum et malesuada fames acme. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit.
+        The thing about pizza is that it does not have to be expensive or
+        complicated to still be really, really good (especially after a special
+        kind of gummy). We are actually home to a lot of amazing pizza joints.
+        Even better—those pizza joints all offer something unique, from classic
+        Neapolitan-style pies to foldable NY slices to light and crispy
+        Roman-style pinsas, which means you can totally eat some form of dough
+        and topping every night of the week and never feel like you are having
+        the same meal twice.
       </p>
       <div className={styles.wrapper}>
         {data.map((d) => (

@@ -170,7 +170,7 @@ const Cart = () => {
               </button>
               <PayPalScriptProvider
                 options={{
-                  'client-id': `${process.env.PAYPAL_CLIENTID}`,
+                  'client-id': 'test' || `${process.env.PAYPAL_CLIENTID}`,
                   components: 'buttons',
                   currency: 'USD',
                   'disable-funding': 'credit,card,p24',
