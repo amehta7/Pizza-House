@@ -11,6 +11,8 @@ const Add = ({ setClose }) => {
   const [extraOptions, setExtraOptions] = useState([])
   const [extra, setExtra] = useState(null)
 
+  let cloud_name = process.env.NEXT_CLOUD_NAME
+
   const handleExtraInput = (e) => {
     setExtra((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
@@ -30,9 +32,11 @@ const Add = ({ setClose }) => {
     data.append('file', file)
     data.append('upload_preset', 'upload')
 
+    //console.log(`${cloud_name}`)
+
     try {
       const uploadRes = await axios.post(
-        `https://api.cloudinary.com/v1_1/${process.env.CLOUD_NAME}/image/upload`,
+        `https://api.cloudinary.com/v1_1/${cloud_name}/image/upload`,
         data
       )
 
