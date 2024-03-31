@@ -1,9 +1,9 @@
 #### Pizza House
 
-- Developed "BookNStay," a MERN stack travel booking application inspired by industry leaders like Booking.com using React, Node.js, Express.js, and MongoDB.
-- Created a user-friendly and responsive client-side application with React for smooth browsing and booking experiences.
-- Engineered a robust backend with Express.js and Node.js, integrated with MongoDB for seamless data storage and communication.
-- Implemented end-to-end booking workflow, including real-time availability checks and an intuitive admin dashboard for efficient management.
+- Developed 'Pizza House', an online pizza ordering platform, utilizing React, Redux Toolkit, Next.js, MongoDB, Axios, Cloudinary, and used Paypal for payment gateway.
+- Developed responsive UI, dynamic menus, and streamlined order placement process for enhanced user experience.
+- Designed an admin dashboard for order management, integrated Cloudinary for media, and Paypal for secure payments.
+- Implemented real-time order tracking, improving transparency and communication with customers; delivered user-centric solutions meeting digital business needs.
 
 ##### Key Features:
 
